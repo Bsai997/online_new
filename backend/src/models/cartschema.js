@@ -12,25 +12,24 @@ const cartschema = new Schema({
             type: Schema.Types.ObjectId,
             ref: 'product',
             required: true,
-            unique:true
          },
          quantity: {
             type: Number,
             default: 1
          },
-         productname:{
-            type:String,
+         productname: {
+            type: String,
 
          },
-         price:{
-            type:Number,
-            default:0
+         price: {
+            type: Number,
+            default: 0
          },
 
       }
    ]
 }
-,{ timestamps: true }
+   , { timestamps: true }
 )
-const cart = mongoose.model('cart',cartschema)
-module.exports=cart;
+const cart = mongoose.model('cart', cartschema)
+module.exports = cart;
